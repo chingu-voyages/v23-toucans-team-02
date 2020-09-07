@@ -1,0 +1,163 @@
+
+/*MAIN SECTION FOR THE PAGE LAYOUT*/
+body{
+  margin: 0;
+  justify-content: center;
+}
+.flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.flex-container > div{
+  width: 90%;
+  flex-direction: column;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container > .header{
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #d1d1;
+}
+/* ENDS HERE : MAIN SECTION FOR THE PAGE LAYOUT*/
+
+
+/* HEADER STYLING STARTS HERE */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  color: #46376a;
+}
+nav ul li,a{
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+  margin: 10px;
+}
+#app-logo {
+  height: 10vmin;
+  margin: 4px;
+}
+#search-input{
+  padding: 10px;
+  border: none;
+  border: 1px solid #d1d1;
+  border-radius: 20px;
+  text-align: center;
+  transition: .4s ease-out;
+}
+#search-input:focus{
+  outline: none;
+  text-align: center;
+  transform: scale(1.2);
+  transition: .2s ease-in;
+  font-family: 'Merriweather', serif;
+
+  }
+/* HEADER STYLING ENDS HERE */
+
+
+/*CONTENT / BODY STYLING WILL START HERE*/
+
+/*CONTENT / BODY STYLING WILL END HERE*/
+
+
+/*FOOTER STYLING */
+.footer{
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  background: #46376a;
+}
+
+/*TEMPLATE RESPONSIVENESS STARTS HERE*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) *//*MOBILE QUERIES FOR RESPONSIVENESS*/
+@media only screen and (max-width: 600px) {
+  .flex-container > div{
+    width:90%;
+    flex-direction: column;
+  }
+  nav ul{
+    flex-direction: column;
+    font-size: 10vw;
+  }
+  ul li{
+    margin: 10px;
+  }
+  ul li a{
+    font-size: .8em;
+  }
+}
+
+/*Medium devices (landscape tablets, 768px and up)*/
+/*TABLET QUERIES FOR RESPONSIVENESS*/
+@media only screen and (min-width: 768px) {
+  .flex-container > .div1,.div2{
+  width: 90%;
+  flex-direction: row;
+  margin: 5px;
+  }
+  nav ul{
+    flex-direction: column;
+  }
+  ul li{
+    margin: 10px;
+    font-size:
+  }
+}
+
+/*Large devices (laptops/desktops, 992px and up)*/
+@media only screen and (min-width: 992px) {
+  .flex-container{
+    flex-direction: row;
+  }
+  .flex-container > div > .div1, .div2{
+    width:30%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav ul{
+    flex-direction: row;
+  }
+  ul li a{
+    font-size: .8em;
+  }
+  .flex-container > .div1,.div2 > *{
+  margin: 40px;
+  }
+}
+
+/*Extra large devices (large laptops and desktops, 1200px and up)*/
+/*@media only screen and (min-width: 1200px) {...}*/
+
+/*@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+}*/
