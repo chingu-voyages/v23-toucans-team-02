@@ -1,0 +1,37 @@
+/* basic reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  this allows font-size to consider browser's default
+  browsers' default usually equals to 16px
+  62.5% of 16px is 10px
+  1rem = html font-size = 10px
+  1.6rem = 16px
+*/
+html { font-size: 62.5%; }
+body { font-size: 1.6rem; }
+
+
+#header {
+  height: 15vw;
+  max-height: 10vh;
+}
+
+#main {
+  /* fictional height */
+  height: 80vh;
+}
+
+#footer {
+  height: 15vw;
+  max-height: 10vh;
+}
+
+#header { background-color: pink; }
+#main { background-color: lightgreen; }
+#footer  { background-color: lightblue; }
+
