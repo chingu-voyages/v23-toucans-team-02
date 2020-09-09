@@ -25,10 +25,7 @@ A short description of the motivation behind the creation and maintenance of the
 ## Requirements
 
 This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
-+ [dotenv](https://www.npmjs.com/package/dotenv)
-+ [Node.js](https://nodejs.org/en/)
-+ [body-parser](https://www.npmjs.com/package/body-parser)
-+ [express](https://expressjs.com/)
+
 + [OpenWeatherMap](https://openweathermap.org/)
 
 
@@ -38,10 +35,9 @@ Provide code examples and explanations of how to get the project, e.g.,
 
 	git clone https://github.com/chingu-voyages/v23-toucans-team-02.git
     cd README.md
-    npm install
-    nodemon app.js
 
-Open browser and go to: http://localhost:3000
+    
+Open browser and go to the location of index.html
 
 ## Usage
 

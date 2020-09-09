@@ -21,14 +21,13 @@ body { font-size: 1.6rem; }
   align-content: center;
 }
 
-.centerDiv {
+.centerCirlce {
   margin: auto;
   width: 60%;
 }
 
-.centerH1 {
-  margin: auto;
-  width: 60%;
+.center {
+  text-align: center;
 }
 
 .circle {
@@ -40,6 +39,11 @@ body { font-size: 1.6rem; }
   color: #fff;
   text-align: center;
   background: #000
+}
+
+.weatherImage {
+  max-width: 100%;
+  height: auto;
 }
 
 #header {

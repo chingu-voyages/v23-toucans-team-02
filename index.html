@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="styles.css">
 
+  <script src="weather.js"></script>
+
 </head>
 
 
 <body>
 
-<!-- Header -->
+  <!-- Header -->
 
-<header id="header">
+  <header id="header">
 
-  <!-- App logo -->
+    <!-- App logo -->
 
-  <!-- Search bar -->
+    <!-- Search bar -->
 
-  <!-- Choose between Fahrenheit and Celsius -->
+    <!-- Choose between Fahrenheit and Celsius -->
 
-  <!-- Switch page style icon -->
+    <!-- Switch page style icon -->
 
-</header>
+  </header>
 
-<!-- Main section  -->
-<main id="main">
+  <!-- Main section  -->
+  <main id="main">
 
-  <section id="now">
+    <section id="now">
 
       <!-- Display Country, state & city -->
 
@@ -40,30 +43,47 @@
 
       <!-- Weather type icon -->
 
-  </section>
+    </section>
 
-  <section id="forecast">
+    <section id="forecast">
 
-      <!-- Forecast title -->
-      <div class="container circle centerDiv">
-        <h1 id="temperature">Temp</h1>
-      </div>
+      <section class="weather-input">
+        <label for="">Enter city or zip code...</label>
+        <input id="check-input" class="input" type="text" placeholder="03801" />
+        <button id="check-button" class="button" type="submit">Check</button>
+      </section>
 
-  </section>
-
-      <!-- Share to social media (*needs precise location*) -->
-
-        <!-- Special event (*needs precise location *)-->
-
-      </main>
-
-<!-- Footer wrapper -->
-
-
-<footer id="footer"> </footer>
+          <section class="weather-display">
+            <!-- Forecast title -->
+            <div class="container circle centerCirlce">
+              <h1 id="temperature"></h1>
+            </div>
+            <div class="container center">
+              <img id="image" class="weatherImage" src="" alt="">
+              <h1 id="city"></h1>
+            </div>
+          </section>
 
 
-<script src="scripts.js"></script>
+
+
+
+    </section>
+
+    <!-- Share to social media (*needs precise location*) -->
+
+    <!-- Special event (*needs precise location *)-->
+
+  </main>
+
+  <!-- Footer wrapper -->
+
+
+  <footer id="footer"> </footer>
+
+
+  <script src="scripts.js"></script>
 
 </body>
+
 </html>
