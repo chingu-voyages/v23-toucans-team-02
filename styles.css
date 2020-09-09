@@ -15,6 +15,36 @@ html, body {
 html { font-size: 62.5%; }
 body { font-size: 1.6rem; }
 
+.temperatureCirlce {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.centerCirlce {
+  margin: auto;
+  width: 60%;
+}
+
+.center {
+  text-align: center;
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  line-height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  background: #000
+}
+
+.weatherImage {
+  max-width: 100%;
+  height: auto;
+}
 
 #header {
   height: 15vw;
@@ -34,4 +64,3 @@ body { font-size: 1.6rem; }
 #header { background-color: pink; }
 #main { background-color: lightgreen; }
 #footer  { background-color: lightblue; }
-
