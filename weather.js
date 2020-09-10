@@ -19,7 +19,6 @@ function checkWeather() {
   }
 }
 
-
 function getWeather(checkWeatherInput) {
   const method = isNaN(checkWeatherInput) ? 'q' : 'zip'
 
@@ -44,7 +43,7 @@ function getRequest(query) {
     weather.temp = Math.round(data.main.temp)
     weather.desc = data.weather[0].main
     update(weather)
-  }).catch( err => {
+  }).catch(err => {
     console.log(err);
     alert('Oops! That\'s not a city! Try again.')
   })
@@ -56,7 +55,7 @@ function update(weather) {
   image.src = 'https://openweathermap.org/img/w/' + weather.img + '.png'
 }
 
-window.onload = function () {
+window.onload = function() {
   weatherTemperature = document.getElementById('temperature');
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
