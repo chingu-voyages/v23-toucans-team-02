@@ -31,14 +31,17 @@ body { font-size: 1.6rem; }
 }
 
 .circle {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 30px;
   color: #fff;
   text-align: center;
   background: #000
+}
+#wrapper{
+  margin:10px;
 }
 
 .weatherImage {

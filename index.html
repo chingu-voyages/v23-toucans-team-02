@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Weather App</title>
   <link rel="stylesheet" href="styles.css">
 
-  <script src="weather.js"></script>
+
 
 </head>
 
@@ -34,6 +35,14 @@
     <section id="now">
 
       <!-- Display Country, state & city -->
+  <div id="wrapper-geolocation">
+    <span id="status"></span>
+   <div id="output">
+      <h1 id="country"></h1>
+      <h1 id="state"></h1>
+      <h1 id="flag"></h1>
+   </div>
+  </div>
 
       <!-- Date -->
 
@@ -48,9 +57,9 @@
     <section id="forecast">
 
     <section class="weather-input">
-      <label for="">Enter city or zip code...</label>
+      <!-- <label for="">Enter city or zip code...</label> -->
        <input id="check-input" class="input" type="text" placeholder="03801" />
-      <button id="check-button" class="button" type="submit">Check</button>
+      <button id="check-button" class="button" type="submit" onclick="findMyGeolocation()">Check</button>
     </section>
 
     <section class="weather-display">
@@ -81,8 +90,9 @@
 
   <footer id="footer"> </footer>
 
-
+  <script src="geolocation.js"></script>
   <script src="scripts.js"></script>
+  <script src="weather.js"></script>
 
 </body>
 
