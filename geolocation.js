@@ -1,8 +1,8 @@
      // variable declaration / selecting the dom elements.
-     const country = document.getElementById('country');
-     const state = document.getElementById('state');
-     const city = document.getElementById('city');
-     const flag = document.getElementById('flag');
+     var country = document.getElementById('country');
+     var state = document.getElementById('state');
+     var city = document.getElementById('city');
+     var flag = document.getElementById('flag');
 
     $("#wrapper-geolocation").ready(function(){
 
