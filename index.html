@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Weather App</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 06ac1c8f0b7dd13ef335b765c178c525de8d698e
 
 </head>
 
@@ -24,6 +28,12 @@
     <!-- Search bar -->
 
     <!-- Choose between Fahrenheit and Celsius -->
+    <div class="temp-chooser">
+      <label for="">F&#176;</label>
+      <input id="imperial" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
+      <label for="">C&#176;</label>
+      <input id="metric" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
+    </div>
 
     <!-- Switch page style icon -->
 
@@ -54,6 +64,7 @@
 
     <section id="forecast">
 
+<<<<<<< HEAD
     <section class="weather-input">
        <!-- <label for="">Enter city or zip code...</label> -->
        <input id="check-input" class="input" type="text" placeholder="03801" />
@@ -73,6 +84,24 @@
     </section>
 
 
+=======
+      <section class="weather-input">
+        <label for="">Enter city or zip code...</label>
+        <input id="check-input" class="input" type="text" placeholder="03801" />
+        <button id="check-button" class="button" type="submit">Check</button>
+      </section>
+
+      <section class="weather-display">
+        <!-- Forecast title -->
+        <div class="container circle centerCirlce">
+          <h1 id="temperature"></h1>
+        </div>
+        <div class="container center">
+          <img id="image" class="weatherImage" src="" alt="">
+          <p class="weatherCity" id="city"></p>
+        </div>
+      </section>
+>>>>>>> 06ac1c8f0b7dd13ef335b765c178c525de8d698e
 
     </section>
 
@@ -87,9 +116,14 @@
 
   <footer id="footer"> </footer>
 
+<<<<<<< HEAD
   <script src="geolocation.js"></script>
   <script src="scripts.js"></script>
   <script src="weather.js"></script>
+=======
+  <script src="js/weather.js"></script>
+  <script src="js/scripts.js"></script>
+>>>>>>> 06ac1c8f0b7dd13ef335b765c178c525de8d698e
 
 </body>
 
