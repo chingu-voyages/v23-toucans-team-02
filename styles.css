@@ -15,6 +15,11 @@ html, body {
 html { font-size: 62.5%; }
 body { font-size: 1.6rem; }
 
+.temp-chooser {
+  padding: 10px;
+  float: right;
+}
+
 .temperatureCirlce {
   text-align: center;
   align-items: center;
