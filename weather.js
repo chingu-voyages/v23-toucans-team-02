@@ -1,59 +1,71 @@
-const apiKey = '01488c5d026e0674a47f8899573414fb'
+const apiKey = ''
 var weatherTemperature;
 var weatherCity;
 var weatherDescription;
 var weatherImage;
+var measurementChoice;
 var units;
+var storedUnits;
 
 function checkWeather() {
-  setTemperatureChoice();
 
   var checkWeatherButton = document.getElementById('check-button')
 
   checkWeatherButton.onclick = function() {
     var checkWeatherInput = document.getElementById('check-input').value
     getTemperatureChoice();
-    getWeather(checkWeatherInput)
+    getWeather(checkWeatherInput);
   }
 
   if (localStorage.getItem('weatherInput') !== null) {
     document.getElementById('check-input').value = localStorage.getItem('weatherInput');
     var checkWeatherInput = document.getElementById('check-input').value
     getTemperatureChoice();
-    getWeather(checkWeatherInput)
+    getWeather(checkWeatherInput);
   }
 }
 
 function getTemperatureChoice() {
   let measurementChoice = localStorage.getItem('tempChooser');
 
-  console.log("getTemp: " + measurementChoice);
-
-  // if (measurementChoice !== null) {
     if (measurementChoice === "imperial") {
-      console.log("no");
       document.getElementById('imperial').checked = true;
       document.getElementById('metric').checked = false;
+      units= "imperial";
     } else if (measurementChoice === "metric") {
-      console.log("yes");
       document.getElementById('imperial').checked = false;
       document.getElementById('metric').checked = true;
+      units="metric";
     };
+}
 
-  // }
+function storeTemperatureChoice() {
+  if (measurementChoice === true) {
+    units = "imperial";
+    localStorage.removeItem('tempChooser');
+    localStorage.setItem('tempChooser', "imperial");
+  } else {
+    units = "metric";
+    localStorage.removeItem('tempChooser');
+    localStorage.setItem('tempChooser', "metric");
+  };
 }
 
 function setTemperatureChoice() {
   // refer to index.html to get metric or imperial
-  const measurementChoice = document.getElementById("imperial").checked;
+  measurementChoice = document.getElementById("imperial").checked;
+  storedUnits = localStorage.getItem('tempChooser');
 
   if (measurementChoice === true) {
-    units = "imperial";
-    localStorage.setItem('tempChooser', "imperial");
+    document.getElementById("imperial").checked = true;
+    units="imperial";
   } else {
-    units = "metric";
-    localStorage.setItem('tempChooser', "metric");
+    document.getElementById("metric").checked = true;
+    units="metric";
   };
+
+  storeTemperatureChoice();
+  checkWeather();
 }
 
 function getWeather(checkWeatherInput) {
@@ -92,5 +104,6 @@ window.onload = function() {
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
 
-  checkWeather()
+  getTemperatureChoice();
+  checkWeather();
 }
