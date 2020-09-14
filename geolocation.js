@@ -1,8 +1,8 @@
      // variable declaration / selecting the dom elements.
-     var country = document.getElementById('country');
-     var state = document.getElementById('state');
-     var city = document.getElementById('city');
-     var flag = document.getElementById('flag');
+     const country = document.getElementById('country');
+     const state = document.getElementById('state');
+     const city = document.getElementById('city');
+     const flag = document.getElementById('flag');
 
     $("#wrapper-geolocation").ready(function(){
 
@@ -10,7 +10,10 @@
     navigator.geolocation.getCurrentPosition(function(position){
     console.log(position);
 
-    const api_url = "https://api.opencagedata.com/geocode/v1/json?q="+ position.coords.latitude + ","+position.coords.longitude +"&key={}&sensor=false";
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+
+    const api_url = "https://api.opencagedata.com/geocode/v1/json?q="+ lat + ","+ lon +"&key=e44aa2b4fab54900a703a9051f896e71&sensor=false";
 
     async function getCityName(){
     const response = await fetch(api_url);

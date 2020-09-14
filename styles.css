@@ -14,7 +14,12 @@ html, body {
 */
 html { font-size: 62.5%; }
 body { font-size: 1.6rem; }
-
+#flag{
+  position: relative;
+  top: -135px;
+  left: 175px;
+  width: 10%;
+}
 .temperatureCirlce {
   text-align: center;
   align-items: center;
