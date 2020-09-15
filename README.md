@@ -1,5 +1,9 @@
 # WeatherApp
 
+<<<<<<< HEAD
+This is our awesome repo that is really really cool.
+Added this link to practice approving PR!
+=======
 Short introduction or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
 This project is a team based project brought to you by [Chingu](https://chingu.io/) and is a team in Voyage-23.
@@ -26,6 +30,8 @@ A short description of the motivation behind the creation and maintenance of the
 
 This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
 
++ [OpenWeatherMap](https://openweathermap.org/)
+
 
 ## Installation or Getting Started
 
@@ -33,8 +39,9 @@ Provide code examples and explanations of how to get the project, e.g.,
 
 	git clone https://github.com/chingu-voyages/v23-toucans-team-02.git
     cd README.md
-    npm install README.md
-    npm start
+
+    
+Open browser and go to the location of index.html
 
 ## Usage
 
@@ -55,3 +62,4 @@ Let people know how they can dive into the project, include important links to t
 
 
 **[⬆ back to top](#table-of-contents)**
+>>>>>>> f77a2c2450654158032b38603b0a90370eb13aec
