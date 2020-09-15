@@ -2,131 +2,110 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-
 <body>
+<!-- Header -->
+<header id="header">
+  <!-- App logo -->
+  <!-- Search bar -->
 
-  <!-- Header -->
+  <!-- Choose between Fahrenheit and Celsius -->
+  <div class="temp-chooser">
+    <label for="">F&#176;</label>
+    <input
+      id="imperial"
+      type="radio"
+      name="tempChooser"
+      value=""
+      onclick="setTemperatureChoice()"
+    />
+    <label for="">C&#176;</label>
+    <input
+      id="metric"
+      type="radio"
+      name="tempChooser"
+      value=""
+      onclick="setTemperatureChoice()"
+    />
+  </div>
 
-  <header id="header">
+  <!-- Switch page style icon -->
+</header>
 
-    <!-- App logo -->
-
-    <!-- Search bar -->
-
-    <!-- Choose between Fahrenheit and Celsius -->
-    <div class="temp-chooser">
-      <label for="">F&#176;</label>
-      <input id="imperial" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
-      <label for="">C&#176;</label>
-      <input id="metric" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
+<!-- Main section  -->
+<main id="main">
+  <section id="now">
+    <!-- Display Country, state & city -->
+    <div id="wrapper-geolocation">
+      <h4 id="country"></h4>
+      <h4 id="state"></h4>
+      <h1 id="city"></h1>
+      <h1 id="flag"></h1>
     </div>
 
-    <!-- Switch page style icon -->
-
-  </header>
-
-  <!-- Main section  -->
-  <main id="main">
-
-    <section id="now">
-
-      <!-- Display Country, state & city -->
-      <div id="wrapper-geolocation">
-          <h4 id="country"></h4>
-          <h4 id="state"></h4>
-          <h1 id="city"></h1>
-          <h1 id="flag"></h1>
-      </div>
-
-      <!-- Date -->
-
+    <!-- Date and Time -->
+    <div id="wrapper-datetime">
       <div id="date"></div>
-      
-      <!-- Time -->
       <div id="time"></div>
+    </div>
 
-      <!-- Visual representation of the temperature -->
-      
-      <!-- Weather type icon -->
-    
+    <!-- Visual representation of the temperature -->
+    <!-- Weather type icon -->
   </section>
 
+  <!-- Visual representation of the temperature -->
 
-      <!-- Time -->
+  <!-- Weather type icon -->
 
-      <!-- Visual representation of the temperature -->
-
-      <!-- Weather type icon -->
-
-    </section>
-
-    <section id="forecast">
-
-
+  <section id="forecast">
     <section class="weather-input">
-       <!-- <label for="">Enter city or zip code...</label> -->
-       <input id="check-input" class="input" type="text" placeholder="03801" />
-       <button id="check-button" class="button" type="submit" onclick="findMyGeolocation()">Check</button>
+      <!-- <label for="">Enter city or zip code...</label> -->
+      <input
+        id="check-input"
+        class="input"
+        type="text"
+        placeholder="03801"
+      />
+      <button
+        id="check-button"
+        class="button"
+        type="submit"
+        onclick="findMyGeolocation()"
+      >
+        Check
+      </button>
     </section>
-
 
     <section class="weather-display">
       <!-- Forecast title -->
-      <div class="container circle centerCirlce">
+      <div class="container circle centerCircle">
         <h1 id="temperature"></h1>
-         </div>
-          <div class="container center">
-            <img id="image" class="weatherImage" src="" alt="">
-            <h4 id="description"></h4>
-            <!-- moved the city to #wrapper-location -->
-          </div>
+      </div>
+      <div class="container center">
+        <img id="image" class="weatherImage" src="" alt="" />
+        <h4 id="description"></h4>
+        <!-- moved the city to #wrapper-location -->
+      </div>
     </section>
+  </section>
 
+  <!-- Share to social media (*needs precise location*) -->
+  <!-- Special event (*needs precise location *)-->
+</main>
 
+<!-- Footer wrapper -->
+<footer id="footer"></footer>
 
-      <section class="weather-input">
-        <label for="">Enter city or zip code...</label>
-        <input id="check-input" class="input" type="text" placeholder="03801" />
-        <button id="check-button" class="button" type="submit">Check</button>
-      </section>
-
-      <section class="weather-display">
-        <!-- Forecast title -->
-        <div class="container circle centerCirlce">
-          <h1 id="temperature"></h1>
-        </div>
-        <div class="container center">
-          <img id="image" class="weatherImage" src="" alt="">
-          <p class="weatherCity" id="city"></p>
-        </div>
-      </section>
-
-
-    </section>
-
-    <!-- Share to social media (*needs precise location*) -->
-
-    <!-- Special event (*needs precise location *)-->
-
-  </main>
-
-  <!-- Footer wrapper -->
-
-
-  <footer id="footer"> </footer>
-  
-  <script src="js/geolocation.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/scripts.js"></script>
-  <script src="date-time.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/geolocation.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/date-time.js"></script>
 
 </body>
 
