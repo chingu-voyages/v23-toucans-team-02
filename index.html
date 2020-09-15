@@ -2,35 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="css/styles.css">
 
 
 
+=======
+  <link rel="stylesheet" href="css/styles.css" />
+>>>>>>> 9d1ac8731c4f23117908e48bdc53108537b3b4d7
 </head>
-
 
 <body>
 
-  <!-- Header -->
+<!-- Header -->
+<header id="header">
+  <!-- App logo -->
+  <!-- Search bar -->
+  <section class="weather-input">
+    <!-- <label for="">Enter city or zip code...</label> -->
+    <input id="check-input" class="input" type="text" placeholder="03801">
+    <button id="check-button" class="button" type="submit" onclick="findMyGeolocation()">Check</button>
+  </section>
 
-  <header id="header">
+  <!-- Choose between Fahrenheit and Celsius -->
+  <div class="temp-chooser">
+    <label for="">F&#176;</label>
+    <input id="imperial" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()" />
 
-    <!-- App logo -->
+    <label for="">C&#176;</label>
+    <input id="metric" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()" />
+  </div>
 
-    <!-- Search bar -->
+  <!-- Switch page style icon -->
+</header>
 
-    <!-- Choose between Fahrenheit and Celsius -->
-    <div class="temp-chooser">
-      <label for="">F&#176;</label>
-      <input id="imperial" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
-      <label for="">C&#176;</label>
-      <input id="metric" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()">
+<!-- Main section  -->
+<main id="main">
+  <section id="now">
+    <!-- Display Country, state & city -->
+    <div id="wrapper-geolocation">
+      <h4 id="country"></h4>
+      <h4 id="state"></h4>
+      <h1 id="city"></h1>
+      <h1 id="flag"></h1>
     </div>
 
+<<<<<<< HEAD
     <!-- Switch page style icon -->
 
   </header>
@@ -89,25 +109,55 @@
       </section>
 
 
+=======
+    <!-- Date and Time -->
+    <div id="wrapper-datetime">
+      <div id="date"></div>
+
+      <div id="time"></div>
+    </div>
+
+    <section class="weather-display">
+      <!-- Visual representation of the temperature -->
+      <div class="container circle centerCircle">
+        <h1 id="temperature"></h1>
+      </div>
+      <!-- Weather type icon -->
+      <div class="container center">
+        <img id="image" class="weatherImage" src="" alt="" />
+        <h4 id="description"></h4>
+      </div>
+>>>>>>> 9d1ac8731c4f23117908e48bdc53108537b3b4d7
     </section>
+  
+  </section>
+  
+  <section id="forecast">
+    <!-- Forecast title -->
+    <!-- Forecast box -->
+  </section>
 
-    <!-- Share to social media (*needs precise location*) -->
+  <!-- Share to social media (*needs precise location*) -->
+  <!-- Special event (*needs precise location*)-->
+</main>
 
-    <!-- Special event (*needs precise location *)-->
+<!-- Footer wrapper -->
+<footer id="footer"></footer>
 
-  </main>
-
-  <!-- Footer wrapper -->
-
-
-  <footer id="footer"> </footer>
-
+<<<<<<< HEAD
 
   <script src="js/geolocation.js"></script>
   <script src="js/weather.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/date-time.js"></script>
 
+=======
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/geolocation.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/date-time.js"></script>
+>>>>>>> 9d1ac8731c4f23117908e48bdc53108537b3b4d7
 
 </body>
 
