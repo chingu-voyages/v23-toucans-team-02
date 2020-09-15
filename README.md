@@ -26,6 +26,8 @@ A short description of the motivation behind the creation and maintenance of the
 
 This section is optional if there isn't any special dependencies. Else a bulletlist will suffice, e.g.,
 
++ [Google Hosted Libraries -jquery](https://developers.google.com/speed/libraries/)
++ [OpenCage Geocoder](https://opencagedata.com)
 + [OpenWeatherMap](https://openweathermap.org/)
 
 
