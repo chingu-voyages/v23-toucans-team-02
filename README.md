@@ -1,5 +1,9 @@
 # WeatherApp
 
+<<<<<<< HEAD
+This is our awesome repo that is really really cool.
+Added this link to practice approving PR!
+=======
 Short introduction or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
 This project is a team based project brought to you by [Chingu](https://chingu.io/) and is a team in Voyage-23.
@@ -58,3 +62,4 @@ Let people know how they can dive into the project, include important links to t
 
 
 **[⬆ back to top](#table-of-contents)**
+>>>>>>> f77a2c2450654158032b38603b0a90370eb13aec

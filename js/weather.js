@@ -1,4 +1,5 @@
-const apiKey = ''
+
+const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
 var weatherTemperature;
 var weatherCity;
 var weatherDescription;
@@ -85,7 +86,7 @@ function getRequest(query) {
     weather.img = data.weather[0].icon
     weather.city = data.name
     weather.temp = Math.round(data.main.temp)
-    weather.desc = data.weather[0].main
+    weather.desc = data.weather[0].description
     update(weather)
   }).catch(err => {
     console.log(err);
@@ -97,12 +98,14 @@ function update(weather) {
   temperature.innerHTML = weather.temp + '&#176;'
   city.innerHTML = weather.city
   image.src = 'https://openweathermap.org/img/w/' + weather.img + '.png'
+  description.innerHTML = weather.desc
 }
 
 window.onload = function() {
   weatherTemperature = document.getElementById('temperature');
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
+  weatherDescription = document.getElementById('description');
 
   getTemperatureChoice();
   checkWeather();
