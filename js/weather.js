@@ -37,7 +37,11 @@ function getTemperatureChoice() {
       document.getElementById('imperial').checked = false;
       document.getElementById('metric').checked = true;
       units="metric";
-    };
+    } else {
+      document.getElementById('imperial').checked = false;
+      document.getElementById('metric').checked = true;
+      units="metric";
+    }
 }
 
 function storeTemperatureChoice() {
