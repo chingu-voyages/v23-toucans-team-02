@@ -81,6 +81,7 @@ body {
 #check-input {
   margin: 0;
   padding: 0.4rem;
+  width: 20rem;
   font: inherit;
   border: none;
   outline: none;
@@ -94,6 +95,15 @@ body {
   outline: none;
   cursor: pointer;
   background-color: #ccc;
+}
+
+/* MAIN */
+#main {
+  padding: 0.5rem;
+}
+
+#country, #state {
+  display: inline;
 }
 
 /* #footer {
