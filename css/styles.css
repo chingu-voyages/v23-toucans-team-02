@@ -1,9 +1,4 @@
 /* basic reset */
-/* html, body, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-} */
-
 html, body, * {
   box-sizing: border-box;
   margin: 0;
@@ -106,10 +101,10 @@ body {
   display: inline;
 }
 
-/* #footer {
+#footer {
   height: 15vw;
   max-height: 10vh;
-} */
+}
 
 /* #header { background-color: pink; } */
 #main { background-color: lightgreen; }

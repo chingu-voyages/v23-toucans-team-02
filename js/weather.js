@@ -82,7 +82,7 @@ function getRequest(query) {
   fetch(query).then(response => {
     return response.json()
   }).then(data => {
-    console.dir(data);
+    // console.dir(data);
     var weather = {}
     weather.img = data.weather[0].icon
     weather.city = data.name
@@ -98,7 +98,7 @@ function getRequest(query) {
 }
 
 function update(weather) {
-  console.log(weather)
+  // console.log(weather)
   printLocation(weather.lat, weather.lon)
   temperature.innerHTML = weather.temp + '&#176;'
   image.src = 'https://openweathermap.org/img/w/' + weather.img + '.png'
