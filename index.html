@@ -45,24 +45,24 @@
         <div id="state"></div>
       </div>
       <div id="city"></div>
-      <div id="flag"></div>
-    </div>
-
-    <!-- Date and Time -->
-    <div id="wrapper-datetime">
+      <!-- <div id="flag"></div> -->
       <div id="date"></div>
       <div id="time"></div>
     </div>
 
-    <section class="weather-display">
+    <!-- Date and Time -->
+    <div id="wrapper-datetime">
+    </div>
+
+    <section id="weather-display">
       <!-- Visual representation of the temperature -->
-      <div class="container circle centerCircle">
-        <h1 id="temperature"></h1>
+      <div class="circle">
+        <div id="temperature"></div>
       </div>
       <!-- Weather type icon -->
-      <div class="container center">
+      <div class="center">
         <img id="image" class="weatherImage" src="" alt="" />
-        <h4 id="description"></h4>
+        <div id="description"></div>
       </div>
     </section>
   
@@ -78,7 +78,7 @@
 </main>
 
 <!-- Footer wrapper -->
-<footer id="footer"></footer>
+<footer id="footer">(c) Copyright Omar, Tom & Thiago, 2020.</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/geolocation.js"></script>

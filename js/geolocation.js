@@ -16,7 +16,7 @@ function printLocation (lat, lon) {
     country.textContent = data.results[0].components.country + ', ';
     state.textContent = data.results[0].components.state;
     city.textContent = data.results[0].components.county;
-    flag.textContent = data.results[0].annotations.flag;
+    // flag.textContent = data.results[0].annotations.flag;
   }
 
   getLocation();
