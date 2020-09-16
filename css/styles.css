@@ -30,13 +30,13 @@ body {
   width: 10%;
 } */
 
-.temperatureCirlce {
+.temperatureCircle {
   text-align: center;
   align-items: center;
   align-content: center;
 }
 
-.centerCirlce {
+.centerCircle {
   margin: auto;
   width: 60%;
 }
@@ -66,11 +66,7 @@ body {
   height: auto;
 }
 
-/* 
-  HEADER
-  ===========
-  A flexbox with a row of items
-*/
+/* HEADER */
 #header {
   display: flex;
   align-items: center;
@@ -98,10 +94,6 @@ body {
   outline: none;
   cursor: pointer;
   background-color: #ccc;
-}
-
-#main {
-
 }
 
 /* #footer {
