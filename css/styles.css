@@ -1,8 +1,13 @@
 /* basic reset */
-html, body {
+/* html, body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+} */
+
+html, body, * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -13,19 +18,17 @@ html, body {
   1.6rem = 16px
 */
 html { font-size: 62.5%; }
-body { font-size: 1.6rem; }
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.6rem;
+}
 
-#flag{
+/* #flag{
   position: relative;
   top: -135px;
   left: 175px;
   width: 10%;
-}
-
-.temp-chooser {
-  padding: 10px;
-  float: right;
-}
+} */
 
 .temperatureCirlce {
   text-align: center;
@@ -52,9 +55,6 @@ body { font-size: 1.6rem; }
   text-align: center;
   background: #000
 }
-#wrapper{
-  margin:10px;
-}
 
 .weatherCity {
   font-size: 4rem;
@@ -66,21 +66,49 @@ body { font-size: 1.6rem; }
   height: auto;
 }
 
+/* 
+  HEADER
+  ===========
+  A flexbox with a row of items
+*/
 #header {
-  height: 15vw;
-  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #999;
+  background-color: #eee;
+}
+
+/* .location-chooser items */
+#check-input {
+  margin: 0;
+  padding: 0.4rem;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+#check-button {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ccc;
 }
 
 #main {
-  /* fictional height */
-  height: 80vh;
+
 }
 
-#footer {
+/* #footer {
   height: 15vw;
   max-height: 10vh;
-}
+} */
 
-#header { background-color: pink; }
+/* #header { background-color: pink; } */
 #main { background-color: lightgreen; }
 #footer  { background-color: lightblue; }
