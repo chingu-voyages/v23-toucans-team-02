@@ -1,5 +1,6 @@
 .DS_Store
 .env
+.github
 v23-toucans-team-02.code-workspace
 
 # Logs
