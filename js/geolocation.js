@@ -5,6 +5,7 @@ const city = document.getElementById("city");
 const flag = document.getElementById("flag");
 
 function printLocation (lat, lon) {
+
   const api_url = "https://api.opencagedata.com/geocode/v1/json?q="
                   + lat + "," + lon +
                   "&key=e44aa2b4fab54900a703a9051f896e71&sensor=false";
@@ -18,7 +19,6 @@ function printLocation (lat, lon) {
     city.textContent = data.results[0].components.county;
     // flag.textContent = data.results[0].annotations.flag;
   }
-
   getLocation();
 }
 
@@ -29,7 +29,14 @@ $("#wrapper-geolocation").ready(function () {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
 
+      document.getElementById("textLatitude").value = lat;
+      document.getElementById("textLongitude").value = lon;
+
+      document.getElementById("check-input-lat").value = lat;
+      document.getElementById("check-input-log").value = lon;
+
       printLocation (lat, lon);
+
     });
   }
 });
