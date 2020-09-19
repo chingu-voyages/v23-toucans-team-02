@@ -70,6 +70,20 @@ body {
   cursor: pointer;
   background-color: #ccc;
 }
+/* dark mode button & landing page styling */
+.light {
+  background-color: #fff;
+  color: #222;
+  }
+  .dark {
+  background-color: #222!important;
+  color: #e6e6e6;
+  }
+  .switch {
+  position: relative;
+  float: right;
+  right: 10px;
+  }
 
 /* MAIN */
 #main {
