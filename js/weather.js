@@ -1,5 +1,5 @@
-
 const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
+
 var weatherTemperature;
 var weatherCity;
 var weatherDescription;
@@ -7,41 +7,78 @@ var weatherImage;
 var measurementChoice;
 var units;
 var storedUnits;
+var userLat;
+var userLog;
+
+$('#check-input-log').change(function() {
+  document.getElementById('textLongitude').value = $(this).val();
+});
+
+$('#check-input-lat').change(function() {
+  document.getElementById('textLatitude').value = $(this).val();
+});
 
 function checkWeather() {
 
   var checkWeatherButton = document.getElementById('check-button')
 
   checkWeatherButton.onclick = function() {
-    var checkWeatherInput = document.getElementById('check-input').value
+    userLat = document.getElementById("check-input-lat").value;
+    userLog = document.getElementById("check-input-log").value;
     getTemperatureChoice();
-    getWeather(checkWeatherInput);
-  }
-
-  if (localStorage.getItem('weatherInput') !== null) {
-    document.getElementById('check-input').value = localStorage.getItem('weatherInput');
-    var checkWeatherInput = document.getElementById('check-input').value
-    getTemperatureChoice();
-    getWeather(checkWeatherInput);
+    getWeather();
   }
 }
 
+// due to geolocation function, we do not need to save Lat Long in localStorage
+// function getLatLogvalues() {
+//   let userLat = localStorage.getItem('weatherLat');
+//   let userLog = localStorage.getItem('weatherLog');
+//   console.log("userLat: " + userLat);
+//   console.log("userLog: " + userLog);
+//
+//   if (userLat !== null) {
+//     document.getElementById("check-input-lat").value = userLat;
+//     document.getElementById("textLatitude").value = userLat;
+//   } else {
+//     console.log("No Lat in Local Storage");
+//     document.getElementById("check-input-lat").value = "51.482";
+//     document.getElementById("textLatitude").value = "51.482";
+//   }
+//
+//   if (userLog !== null) {
+//     document.getElementById("check-input-log").value = userLog;
+//     document.getElementById("textLongitude").value = userLog;
+//   } else {
+//     console.log("No Log in Local Storage");
+//     document.getElementById("check-input-log").value = "-0.007";
+//     document.getElementById("textLongitude").value = "-0.007";
+//   }
+//
+//   userLat = document.getElementById("check-input-lat").value;
+//   userLog = document.getElementById("check-input-log").value;
+//
+//   document.getElementById("textLatitude").value = userLat;
+//   document.getElementById("textLongitude").value = userLog;
+// }
+
 function getTemperatureChoice() {
+
   let measurementChoice = localStorage.getItem('tempChooser');
 
-    if (measurementChoice === "imperial") {
-      document.getElementById('imperial').checked = true;
-      document.getElementById('metric').checked = false;
-      units= "imperial";
-    } else if (measurementChoice === "metric") {
-      document.getElementById('imperial').checked = false;
-      document.getElementById('metric').checked = true;
-      units="metric";
-    } else {
-      document.getElementById('imperial').checked = false;
-      document.getElementById('metric').checked = true;
-      units="metric";
-    }
+  if (measurementChoice === "imperial") {
+    document.getElementById('imperial').checked = true;
+    document.getElementById('metric').checked = false;
+    units = "imperial";
+  } else if (measurementChoice === "metric") {
+    document.getElementById('imperial').checked = false;
+    document.getElementById('metric').checked = true;
+    units = "metric";
+  } else {
+    document.getElementById('imperial').checked = false;
+    document.getElementById('metric').checked = true;
+    units = "metric";
+  }
 }
 
 function storeTemperatureChoice() {
@@ -63,22 +100,17 @@ function setTemperatureChoice() {
 
   if (measurementChoice === true) {
     document.getElementById("imperial").checked = true;
-    units="imperial";
+    units = "imperial";
   } else {
     document.getElementById("metric").checked = true;
-    units="metric";
+    units = "metric";
   };
-
   storeTemperatureChoice();
   checkWeather();
 }
 
-function getWeather(checkWeatherInput) {
-  const method = isNaN(checkWeatherInput) ? 'q' : 'zip'
-  const query = `https://api.openweathermap.org/data/2.5/weather?${method}=${checkWeatherInput}&units=${units}&APPID=${apiKey}`
-
-  localStorage.setItem('weatherInput', checkWeatherInput);
-
+function getWeather() {
+  const query = `https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLog}&units=${units}&APPID=${apiKey}`
   getRequest(query)
 }
 
@@ -86,7 +118,6 @@ function getRequest(query) {
   fetch(query).then(response => {
     return response.json()
   }).then(data => {
-    // console.dir(data);
     var weather = {}
     weather.img = data.weather[0].icon
     weather.city = data.name
@@ -102,7 +133,6 @@ function getRequest(query) {
 }
 
 function update(weather) {
-  // console.log(weather)
   printLocation(weather.lat, weather.lon)
   temperature.innerHTML = weather.temp + '&#176;'
   image.src = 'https://openweathermap.org/img/w/' + weather.img + '.png'
@@ -114,7 +144,7 @@ window.onload = function() {
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
   weatherDescription = document.getElementById('description');
-
+  // getLatLogvalues();
   getTemperatureChoice();
   checkWeather();
 }
