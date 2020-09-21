@@ -1,8 +1,11 @@
 /* basic reset */
-html, body, * {
-  box-sizing: border-box;
+html, body {
   margin: 0;
   padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*
@@ -12,10 +15,16 @@ html, body, * {
   1rem = html font-size = 10px
   1.6rem = 16px
 */
-html { font-size: 62.5%; }
+html { 
+  font-size: 62.5%;
+  background-color: #fff;
+}
+
 body {
+  height: 100vh;
   font-family: 'Arial', sans-serif;
   font-size: 1.6rem;
+  background: url('/img/clear-sky-sunrise-1.jpg') center center / cover no-repeat fixed;
 }
 
 /* #flag{
@@ -38,6 +47,11 @@ body {
 
 .center {
   text-align: center;
+}
+
+.contrast-text {
+  color: white;
+  mix-blend-mode: difference;
 }
 
 /* HEADER */
@@ -74,12 +88,11 @@ body {
 /* MAIN */
 #main {
   padding: 2vw;
-  /* font-size: 1.6rem; */
 }
 
 #now {
-  background-color: white;
-  border: 1px solid #999;
+  /* background-color: white; */
+  /* border: 1px solid #999; */
   padding: 1rem;
 }
 
@@ -107,6 +120,7 @@ body {
 
 .circle {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50vw;
@@ -114,9 +128,12 @@ body {
   height: 50vw;
   max-height: 40vh;
   border-radius: 50%;
-  font-size: min(18vh, 18vw);
   color: #fff;
-  background: #090909;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#temperature {
+  font-size: min(18vh, 18vw);
 }
 
 .weatherImage {

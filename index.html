@@ -10,6 +10,8 @@
 
 <body>
 
+
+
 <!-- Header -->
 <header id="header">
   <!-- App logo -->
@@ -39,7 +41,7 @@
 <main id="main">
   <section id="now">
     <!-- Display Country, state & city -->
-    <div id="wrapper-geolocation">
+    <div id="wrapper-geolocation" class="contrast-text">
       <div id="country-state">
         <div id="country"></div>
         <div id="state"></div>
@@ -50,19 +52,15 @@
       <div id="time"></div>
     </div>
 
-    <!-- Date and Time -->
-    <div id="wrapper-datetime">
-    </div>
-
     <section id="weather-display">
       <!-- Visual representation of the temperature -->
       <div class="circle">
         <div id="temperature"></div>
+        <div id="description"></div>
       </div>
       <!-- Weather type icon -->
+      <img id="image" class="weatherImage" src="" alt="" />
       <div class="center">
-        <img id="image" class="weatherImage" src="" alt="" />
-        <div id="description"></div>
       </div>
     </section>
 
@@ -78,7 +76,7 @@
 </main>
 
 <!-- Footer wrapper -->
-<footer id="footer">(c) Copyright Omar, Tom & Thiago, 2020.</footer>
+<!-- <footer id="footer">(c) Copyright Omar, Tom & Thiago, 2020.</footer> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/geolocation.js"></script>
