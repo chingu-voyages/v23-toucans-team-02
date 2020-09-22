@@ -5,12 +5,13 @@ const city = document.getElementById("city");
 const flag = document.getElementById("flag");
 
 function printLocation (lat, lon) {
-
+  console.log("printLocation");
   const api_url = "https://api.opencagedata.com/geocode/v1/json?q="
                   + lat + "," + lon +
                   "&key=e44aa2b4fab54900a703a9051f896e71&sensor=false";
 
   async function getLocation() {
+    console.log(getLocation);
     const response = await fetch(api_url);
     const data = await response.json();
 
@@ -23,9 +24,10 @@ function printLocation (lat, lon) {
 }
 
 $("#wrapper-geolocation").ready(function () {
+  console.log("wrapper");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-
+      console.log("wrapper-getCurrentPos");
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
 

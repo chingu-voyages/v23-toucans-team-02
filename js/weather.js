@@ -23,6 +23,7 @@ function checkWeather() {
   var checkWeatherButton = document.getElementById('check-button')
 
   checkWeatherButton.onclick = function() {
+    console.log("Check button clicked");
     userLat = document.getElementById("check-input-lat").value;
     userLog = document.getElementById("check-input-log").value;
     getTemperatureChoice();
@@ -109,11 +110,19 @@ function setTemperatureChoice() {
   };
   storeTemperatureChoice();
   checkWeather();
+  userLat = document.getElementById("check-input-lat").value;
+  userLog = document.getElementById("check-input-log").value;
+  getWeather();
 }
 
 function getWeather() {
   console.log("getWeather");
+  userLat = document.getElementById("check-input-lat").value;
+  userLog = document.getElementById("check-input-log").value;
+  console.log(userLat);
+
   const query = `https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLog}&units=${units}&APPID=${apiKey}`
+  console.log("URL: " + query);
   getRequest(query)
 }
 
@@ -153,7 +162,6 @@ window.onload = function() {
   // getLatLogvalues();
   getTemperatureChoice();
   checkWeather();
-  userLat = document.getElementById("check-input-lat").value;
-  userLog = document.getElementById("check-input-log").value;
+
   getWeather();
 }
