@@ -1,0 +1,149 @@
+/* basic reset */
+html, body, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  this allows font-size to consider browser's default
+  browsers' default usually equals to 16px
+  62.5% of 16px is 10px
+  1rem = html font-size = 10px
+  1.6rem = 16px
+*/
+html { font-size: 62.5%; }
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.6rem;
+}
+
+/* #flag{
+  position: relative;
+  top: -135px;
+  left: 175px;
+  width: 10%;
+} */
+
+/* .temperatureCircle {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+} */
+
+/* .centerCircle {
+  margin: auto;
+  width: 60%;
+} */
+
+.center {
+  text-align: center;
+}
+
+/* HEADER */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #999;
+  background-color: #eee;
+}
+
+/* .location-chooser items */
+#check-input {
+  margin: 0;
+  padding: 0.4rem;
+  width: 20rem;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+#check-button {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #ccc;
+}
+/* dark mode button & landing page styling */
+.light {
+  background-color: #fff;
+  color: #222;
+  }
+  .dark {
+  background-color: #222!important;
+  color: #e6e6e6;
+  }
+  .switch {
+  position: relative;
+  float: right;
+  right: 10px;
+  color:#ddd;
+  }
+
+/* MAIN */
+#main {
+  padding: 2vw;
+  /* font-size: 1.6rem; */
+}
+
+#now {
+  background-color: white;
+  border: 1px solid #999;
+  padding: 1rem;
+}
+
+#wrapper-geolocation {
+  font-size: 1.7rem;
+}
+
+#wrapper-geolocation > div {
+  margin-bottom: 0.75rem;
+}
+
+#country, #state {
+  display: inline;
+}
+
+#city {
+  font-size: 1.5em;
+}
+
+#weather-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  max-width: 40vh;
+  height: 50vw;
+  max-height: 40vh;
+  border-radius: 50%;
+  font-size: min(18vh, 18vw);
+  color: #fff;
+  background: #090909;
+}
+
+.weatherImage {
+  padding-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* FOOTER */
+#footer {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}

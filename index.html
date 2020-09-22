@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+<!-- Header -->
+<header id="header">
+  <!-- App logo -->
+  <!-- Search bar - input new location -->
+  <section class="location-chooser">
+    <!-- <input id="check-input" class="input" type="text" placeholder="Enter city or zip code" value="03801"> -->
+
+    <label for="check-input-lat">Latitude</label>
+    <input id="check-input-lat" class="input" type="range" placeholder="Enter latitude" min="-90" max="90" step="0.001" value="51.482">
+    <input type="text" id="textLatitude" disabled>
+
+    <label for="check-input-log">Longitude</label>
+    <input id="check-input-log" name="check-input-log" class="input" type="range" placeholder="Enter longitude" min="-180" max="180" step="0.001" value="-0.007">
+    <input type="text" id="textLongitude" disabled>
+
+    <button id="check-button" class="button" type="submit" onclick="findMyGeolocation()">Check</button>
+  </section>
+
+  <!-- Choose between Fahrenheit and Celsius -->
+  <div class="temp-chooser">
+    <!--
+      Radio buttons are hard for mobile users to click
+      We shall switch to buttons later on
+    -->
+    <input id="imperial" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()" />
+    <label for="imperial">F&#176;</label>
+
+    <input id="metric" type="radio" name="tempChooser" value="" onclick="setTemperatureChoice()" />
+    <label for="metric">C&#176;</label>
+  </div>
+
+  <!-- Switch page style icon -->
+  <div>
+    <label class="switch" type="checkbox" onclick="darkMode()" id="checkBox" checked="false">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness" width="30" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2196F3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <circle cx="12" cy="12" r="9" />
+      <line x1="12" y1="3" x2="12" y2="21" />
+      <line x1="12" y1="9" x2="16.65" y2="4.35" />
+      <line x1="12" y1="14.3" x2="19.37" y2="6.93" />
+      <line x1="12" y1="19.6" x2="20.85" y2="10.75" />
+      </svg>
+  </label>
+  </div>
+</header>
+
+<!-- Main section  -->
+<main id="main">
+  <section id="now">
+    <!-- Display Country, state & city -->
+    <div id="wrapper-geolocation">
+      <div id="country-state">
+        <div id="country"></div>
+        <div id="state"></div>
+      </div>
+      <div id="city"></div>
+      <!-- <div id="flag"></div> -->
+      <div id="date"></div>
+      <div id="time"></div>
+    </div>
+
+    <!-- Date and Time -->
+    <div id="wrapper-datetime">
+    </div>
+
+    <section id="weather-display">
+      <!-- Visual representation of the temperature -->
+      <div class="circle">
+        <div id="temperature"></div>
+      </div>
+      <!-- Weather type icon -->
+      <div class="center">
+        <img id="image" class="weatherImage" src="" alt="" />
+        <div id="description"></div>
+      </div>
+    </section>
+
+  </section>
+
+  <section id="forecast">
+    <!-- Forecast title -->
+    <!-- Forecast box -->
+  </section>
+
+  <!-- Share to social media (*needs precise location*) -->
+  <!-- Special event (*needs precise location*)-->
+</main>
+
+<!-- Footer wrapper -->
+<footer id="footer">(c) Copyright Omar, Tom & Thiago, 2020.</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/geolocation.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/date-time.js"></script>
+<script src="js/dark-light.js"></script>
+
+</body>
+
+</html>
