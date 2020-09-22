@@ -128,7 +128,7 @@ window.onload = function() {
   weatherImage = document.getElementById('image');
   weatherDescription = document.getElementById('description');
   // getLatLogvalues();
-  
+  readUrlParams();
   getTemperatureChoice();
   checkWeather();
   getWeather();
