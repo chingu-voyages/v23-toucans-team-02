@@ -19,7 +19,7 @@ $('#check-input-lat').change(function() {
 });
 
 function checkWeather() {
-
+  console.log("checkWeather");
   var checkWeatherButton = document.getElementById('check-button')
 
   checkWeatherButton.onclick = function() {
@@ -63,7 +63,7 @@ function checkWeather() {
 // }
 
 function getTemperatureChoice() {
-
+  console.log("getTemperatureChoice");
   let measurementChoice = localStorage.getItem('tempChooser');
 
   if (measurementChoice === "imperial") {
@@ -82,6 +82,7 @@ function getTemperatureChoice() {
 }
 
 function storeTemperatureChoice() {
+  console.log("storeTemperatureChoice");
   if (measurementChoice === true) {
     units = "imperial";
     localStorage.removeItem('tempChooser');
@@ -94,6 +95,7 @@ function storeTemperatureChoice() {
 }
 
 function setTemperatureChoice() {
+  console.log("setTemperatureChoice");
   // refer to index.html to get metric or imperial
   measurementChoice = document.getElementById("imperial").checked;
   storedUnits = localStorage.getItem('tempChooser');
@@ -110,11 +112,13 @@ function setTemperatureChoice() {
 }
 
 function getWeather() {
+  console.log("getWeather");
   const query = `https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLog}&units=${units}&APPID=${apiKey}`
   getRequest(query)
 }
 
 function getRequest(query) {
+  console.log("getRequest");
   fetch(query).then(response => {
     return response.json()
   }).then(data => {
@@ -133,6 +137,7 @@ function getRequest(query) {
 }
 
 function update(weather) {
+  console.log("Update");
   printLocation(weather.lat, weather.lon)
   temperature.innerHTML = weather.temp + '&#176;'
   image.src = 'https://openweathermap.org/img/w/' + weather.img + '.png'
@@ -140,6 +145,7 @@ function update(weather) {
 }
 
 window.onload = function() {
+  console.log("window.onload");
   weatherTemperature = document.getElementById('temperature');
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
@@ -147,4 +153,7 @@ window.onload = function() {
   // getLatLogvalues();
   getTemperatureChoice();
   checkWeather();
+  userLat = document.getElementById("check-input-lat").value;
+  userLog = document.getElementById("check-input-log").value;
+  getWeather();
 }
