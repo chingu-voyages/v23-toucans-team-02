@@ -1,4 +1,4 @@
-const baseUrl = "https://reverent-kilby-ece0be.netlify.app"
+const baseUrl = "https://reverent-kilby-ece0be.netlify.app?"
 
 function readUrlParams() {
   const queryString = document.URL;
@@ -25,7 +25,7 @@ function sendUrlParams() {
   var userLat = "Lat" + document.getElementById("check-input-lat").value;
 
   // BUILD URL TO SHARE
-  const queryString = baseUrl + userLat + userLog;
+  const queryString = baseUrl + "?" + userLat + userLog;
   console.log(queryString);
 
 
