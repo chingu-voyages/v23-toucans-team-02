@@ -21,3 +21,10 @@
 // will see the extra info in the url (city/zip) and then fun the weather.js functions
 // to pull the weather and populate index.html. While I'm in node, I could
 // setup the dotenv as well. Thoughts?
+
+
+
+function getUrlParams(){
+  const queryString = window.location.search;
+  console.log("URL: " + queryString);
+}

@@ -18,11 +18,11 @@
     <!-- <input id="check-input" class="input" type="text" placeholder="Enter city or zip code" value="03801"> -->
 
     <label for="check-input-lat">Latitude</label>
-    <input id="check-input-lat" class="input" type="range" placeholder="Enter latitude" min="-90" max="90" step="0.001" value="51.482">
+    <input id="check-input-lat" class="input" type="range" placeholder="Enter latitude" min="-90" max="90" step="0.001">
     <input type="text" id="textLatitude" disabled>
 
     <label for="check-input-log">Longitude</label>
-    <input id="check-input-log" name="check-input-log" class="input" type="range" placeholder="Enter longitude" min="-180" max="180" step="0.001" value="-0.007">
+    <input id="check-input-log" name="check-input-log" class="input" type="range" placeholder="Enter longitude" min="-180" max="180" step="0.001">
     <input type="text" id="textLongitude" disabled>
 
     <button id="check-button" class="button" type="submit" onclick="findMyGeolocation()">Check</button>
@@ -102,8 +102,10 @@
 <footer id="footer">(c) Copyright Omar, Tom & Thiago, 2020.</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script src="js/geolocation.js"></script>
 <script src="js/weather.js"></script>
+<script src="js/share.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/date-time.js"></script>
 <script src="js/dark-light.js"></script>
