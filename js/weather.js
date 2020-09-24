@@ -1,4 +1,4 @@
-const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
+// const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
 
 var weatherTemperature;
 var weatherCity;
@@ -32,6 +32,7 @@ function checkWeather() {
 }
 
 function getTemperatureChoice() {
+
   console.log("getTemperatureChoice");
   let measurementChoice = localStorage.getItem('tempChooser');
 
@@ -88,6 +89,7 @@ function getWeather() {
   userLat = document.getElementById("check-input-lat").value;
   userLog = document.getElementById("check-input-log").value;
   console.log(userLat);
+  let apiKey = process.env.OPENWEATHER_API_KEY;
 
   const query = `https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLog}&units=${units}&APPID=${apiKey}`
   console.log("URL: " + query);
@@ -128,7 +130,7 @@ window.onload = function() {
   weatherImage = document.getElementById('image');
   weatherDescription = document.getElementById('description');
   // getLatLogvalues();
-  readUrlParams();
+  // readUrlParams();
   getTemperatureChoice();
   checkWeather();
   getWeather();
