@@ -1,4 +1,6 @@
-const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
+let apiKey = process.env.OPENWEATHER_APIKEY
+console.log(`...apiKey:${apiKey}`)
+//const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
 
 var weatherTemperature;
 var weatherCity;
