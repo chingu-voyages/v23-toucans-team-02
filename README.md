@@ -33,6 +33,17 @@ This section is optional if there isn't any special dependencies. Else a bulletl
 
 ## Installation or Getting Started
 
+### Building
+
+We use Webpack to create a runtime bundle containing the executable application
+components in the `dist` directory. You can reference the `webpack.config.js`
+file for details.
+
+To build the app issue the command `npm run build` to create the bundle in
+the `dist` directory.
+
+### Runtime
+
 Provide code examples and explanations of how to get the project, e.g.,
 
 	git clone https://github.com/chingu-voyages/v23-toucans-team-02.git
