@@ -1,3 +1,12 @@
+// Storing application secrets, like API keys, in code is a bad practice.
+// since it exposes confidential information in GitHub. In this app we
+// store our API keys in a `.dotenv` file in the root of the local repo, button
+// also add the `.env` file to `.gitignore` to prevent it from being pushed to
+// to GitHub.
+
+// Retrieve the OpenWeather API key from the cooresponding environment
+// variable. Since we're using the `dotenv-webpack` lirary there's no need
+// for to call the Dotenv.config() function.
 let apiKey = process.env.OPENWEATHER_APIKEY
 console.log(`...apiKey:${apiKey}`)
 //const apiKey = 'ff989f0e492da5efe6a2b71ed5697395'
