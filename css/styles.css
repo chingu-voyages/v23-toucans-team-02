@@ -139,7 +139,18 @@ body {
   max-width: 100%;
   height: auto;
 }
-
+/* upcoming four day forecast */
+#forecast > ul > li {
+  border:2px solid lightBlue;
+  padding:10px;
+  display: inline-block;
+  font-size:15px;
+  list-style: none;
+  border-radius:10px;
+  text-align: center;
+  width:20%;
+  margin:5px;
+}
 
 /* FOOTER */
 #footer {
