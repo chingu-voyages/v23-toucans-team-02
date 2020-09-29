@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
   <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 
 <body>
@@ -91,10 +92,55 @@
 
   <section id="forecast">
     <!-- Forecast title -->
+    <h1>Next four days forecast</h1>
     <!-- Forecast box -->
+    <!-- This section has 4 elements/each li element is for a day -->
+    <ul>
+      <!-- the next day forecast -->
+      <li>
+        <p id="date-day1"></p>
+        <div id="desc1"></div>
+        <div id="min-temp1"></div>
+        <div id="max-temp1"></div>
+        <div id="icon1"><img id="icon-day1" src="" alt="Weather icon"></div>
+      </li>
+      <!-- the second upcoming day forecast -->
+      <li>
+        <p id="date-day2"></p>
+        <div id="desc2"></div>
+        <div id="min-temp2"></div>
+        <div id="max-temp2"></div>
+        <div id="icon2"><img id="icon-day2" src="" alt="Weather icon"></div>
+      </li>
+      <!-- the third upcoming day forecast -->
+      <li>
+        <p id="date-day3"></p>
+        <div id="desc3"></div>
+        <div id="min-temp3"></div>
+        <div id="max-temp3"></div>
+        <div id="icon3"><img id="icon-day3" src="" alt="Weather icon"></div>
+      </li>
+      <!-- the forth upcoming day forecast -->
+      <li>
+        <p id="date-day4"></p>
+        <div id="desc4"></div>
+        <div id="min-temp4"></div>
+        <div id="max-temp4"></div>
+        <div id="icon4"><img id="icon-day4" src="" alt="Weather icon"></div>
+      </li>
+    </ul>
   </section>
 
-  <!-- Share to social media (*needs precise location*) -->
+  <section id="share">
+    <!-- Share to social media (*needs precise location*) -->
+    <div class="center">
+      <button id="share-button" class="button" type="submit" onclick="screenCapture()">Take Screenshot</button>
+    </div>
+  </section>
+
+
+
+
   <!-- Special event (*needs precise location*)-->
 </main>
 
@@ -109,6 +155,8 @@
 <script src="js/scripts.js"></script>
 <script src="js/date-time.js"></script>
 <script src="js/dark-light.js"></script>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/four-days-forecast.js"></script>
 
 </body>
 

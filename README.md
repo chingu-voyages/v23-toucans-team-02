@@ -29,16 +29,14 @@ This section is optional if there isn't any special dependencies. Else a bulletl
 + [Google Hosted Libraries -jquery](https://developers.google.com/speed/libraries/)
 + [OpenCage Geocoder](https://opencagedata.com)
 + [OpenWeatherMap](https://openweathermap.org/)
-
++ [html2canvas](https://html2canvas.hertzen.com/)
 
 ## Installation or Getting Started
 
 Provide code examples and explanations of how to get the project, e.g.,
 
 	git clone https://github.com/chingu-voyages/v23-toucans-team-02.git
-    cd README.md
-
-
+    
 Open browser and go to the location of index.html
 
 ## Usage

@@ -31,39 +31,8 @@ function checkWeather() {
   }
 }
 
-// due to geolocation function, we do not need to save Lat Long in localStorage
-// function getLatLogvalues() {
-//   let userLat = localStorage.getItem('weatherLat');
-//   let userLog = localStorage.getItem('weatherLog');
-//   console.log("userLat: " + userLat);
-//   console.log("userLog: " + userLog);
-//
-//   if (userLat !== null) {
-//     document.getElementById("check-input-lat").value = userLat;
-//     document.getElementById("textLatitude").value = userLat;
-//   } else {
-//     console.log("No Lat in Local Storage");
-//     document.getElementById("check-input-lat").value = "51.482";
-//     document.getElementById("textLatitude").value = "51.482";
-//   }
-//
-//   if (userLog !== null) {
-//     document.getElementById("check-input-log").value = userLog;
-//     document.getElementById("textLongitude").value = userLog;
-//   } else {
-//     console.log("No Log in Local Storage");
-//     document.getElementById("check-input-log").value = "-0.007";
-//     document.getElementById("textLongitude").value = "-0.007";
-//   }
-//
-//   userLat = document.getElementById("check-input-lat").value;
-//   userLog = document.getElementById("check-input-log").value;
-//
-//   document.getElementById("textLatitude").value = userLat;
-//   document.getElementById("textLongitude").value = userLog;
-// }
-
 function getTemperatureChoice() {
+
   console.log("getTemperatureChoice");
   let measurementChoice = localStorage.getItem('tempChooser');
 
@@ -160,8 +129,8 @@ window.onload = function() {
   weatherImage = document.getElementById('image');
   weatherDescription = document.getElementById('description');
   // getLatLogvalues();
+  // readUrlParams();
   getTemperatureChoice();
   checkWeather();
-
   getWeather();
 }
