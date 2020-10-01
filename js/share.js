@@ -11,3 +11,13 @@ function screenCapture() {
     window.open(base64image);
   });
 }
+
+function shareOnTwitter() {
+
+  var weatherTemp;
+  var tweetMessage;
+  weatherTemp = document.getElementById('temperature').innerHTML;
+  console.log("CURRENT TEMP:" + weatherTemp);
+  tweetMessage="https://twitter.com/intent/tweet?text=It%20is%20currently%20" + weatherTemp + "here. %20To%20get%20your%20weather%20visit: https://v23weather.netlify.app/"
+  document.getElementById('shareTweet').href = tweetMessage;
+}

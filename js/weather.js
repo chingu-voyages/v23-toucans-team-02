@@ -92,6 +92,7 @@ function getWeather() {
 
   const query = `https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLog}&units=${units}&APPID=${apiKey}`
   console.log("URL: " + query);
+  shareOnTwitter();
   getRequest(query)
 }
 
@@ -133,4 +134,5 @@ window.onload = function() {
   getTemperatureChoice();
   checkWeather();
   getWeather();
+  shareOnTwitter();
 }
