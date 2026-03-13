@@ -129,10 +129,8 @@ window.onload = function() {
   weatherCity = document.getElementById('city');
   weatherImage = document.getElementById('image');
   weatherDescription = document.getElementById('description');
-  // getLatLogvalues();
-  // readUrlParams();
   getTemperatureChoice();
   checkWeather();
-  getWeather();
+  // getWeather() is now called from geolocation.js after lat/lon are set (#46)
   shareOnTwitter();
 }

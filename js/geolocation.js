@@ -39,6 +39,14 @@ $("#wrapper-geolocation").ready(function () {
 
       printLocation (lat, lon);
 
+      // Fetch weather once geolocation is available (#46)
+      if (typeof getTemperatureChoice === 'function') {
+        getTemperatureChoice();
+      }
+      if (typeof getWeather === 'function') {
+        getWeather();
+      }
+
     });
   }
 });
